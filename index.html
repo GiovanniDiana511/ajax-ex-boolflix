@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <title>Boolflix</title>
@@ -13,7 +14,7 @@
             <header>
                 <div class="container-inner">
                     <div class="logo">
-                        <img src="https://i.pinimg.com/originals/6e/6b/00/6e6b0044fc48f28b9632bd0f23abf551.png" alt="LOGO">
+                        <img src="img/logo.png" alt="LOGO">
                     </div>
                     <div class="search-box">
                         <input id="input-text" type="text" placeholder="Inserisci il testo" name="" value="">
@@ -21,18 +22,19 @@
                     </div>
                 </div>
             </header>
-            <div class="card">
+
+            <div class="container-inner result">
 
             </div>
         </div>
 
         <script id="template" type="text/x-handlebars-template">
-            <ul id="test-ul">
-                <li>{{titolo}}</li>
-                <li>{{titoloOriginale}}</li>
-                <li>{{lingua}}</li>
-                <li>{{voto}}</li>
-            </ul>
+            <div class="card-template">
+                <span><span class="info-text">Titolo</span><span>{{titolo}}</span>
+                <span><span class="info-text">Titolo Originale</span><span>{{titoloOriginale}}</span>
+                <span><span class="info-text">Lingua Originale</span><span>{{lingua}}</span>
+                <span><span class="info-text">Voto</span><span>{{voto}}</span>
+            </div>
         </script>
 
         <script src="js/main.js" charset="utf-8"></script>

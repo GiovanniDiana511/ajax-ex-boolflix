@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -18,20 +19,23 @@
 }
 
 header {
-    height: 70px;
+    height: 100px;
     width: 100%;
     background-color: #222222;
     display: flex;
+    border-bottom: 1px solid darkred;
 }
 
 .logo {
     width: 50%;
     height: 100%;
+    margin-left: 10px;
 }
 
 .logo > img {
-    height: 70px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
+    margin: 10px;
 }
 
 .search-box {
@@ -40,21 +44,65 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-right: 10px;
 }
 
 .search-box > input {
     height: 30px;
+    border-radius: 3px;
+    padding-left: 5px;
 }
 
 #button-search {
     margin-left: 15px;
     width: 80px;
     height: 30px;
-    background-color: red;
+    background-color: darkred;
     color: white;
     border: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-#test-ul {
+#button-search:hover {
+    background-color: red;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.result {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-template {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     color: white;
+    background-color: #222222;
+    height: 320px;
+    flex-basis: 250px;
+    border-radius: 5px;
+    margin: 10px;
+    border: 1px solid white;
+}
+
+.card-template:hover {
+    border: 1px solid darkred;
+    transition: 0.2s;
+}
+
+.card-template > span {
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.info-text {
+    color: red;
+    font-weight: 700;
+    display: block;
 }

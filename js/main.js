@@ -4,6 +4,7 @@ $(document).ready(function(){
     var template = Handlebars.compile(source);
 
     $("#button-search").click(function () {
+
         var valoreInput = $("#input-text").val();
 
         $.ajax({
@@ -12,10 +13,10 @@ $(document).ready(function(){
             method: 'GET',
             success: function (data) {
                 var films = data.results;
-                console.log(films);
+                //console.log(films);
                 for (var i = 0; i < films.length; i++) {
                     var film = films[i];
-                    console.log(film);
+                    //console.log(film);
                     var dataApi = {
                         titolo: film.title,
                         titoloOriginale: film.original_title,
@@ -23,15 +24,16 @@ $(document).ready(function(){
                         voto: film.vote_average
                     }
                     var templateFull = template(dataApi);
-                    $(".card").append(templateFull);
+                    $(".container-inner.result").append(templateFull);
                 }
             },
             error: function (err) {
-                alert('BOOM');
+                alert('Perché non provi a scrivere qualcosa?');
             }
         });
-        var valoreInput = $("#input-text").val("");
-    })
+        $("#input-text").val("");
+        $(".container-inner.result").html("");
+    });
 
 
 
