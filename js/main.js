@@ -23,7 +23,12 @@ $(document).ready(function(){
 
         $.ajax({
 
-            url: "https://api.themoviedb.org/3/search/movie?api_key=ac276298d3559f44db38fabbb3f9c6eb&language=en-US&page=1&include_adult=false&query=" + valoreInput, // Completiamo l'url con la query dell'utente
+            url: "https://api.themoviedb.org/3/search/movie",
+            data: {
+                api_key: "ac276298d3559f44db38fabbb3f9c6eb",
+                query: valoreInput,
+                language: "it-IT"
+            },
             method: 'GET',
             success: function (data) {
                 var films = data.results;
@@ -59,7 +64,7 @@ $(document).ready(function(){
                 alert('Perché non provi a scrivere qualcosa?');
             }
         });
-        
+
         $("#input-text").val("");
         $(".container-inner.result").html("");
     }
