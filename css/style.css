@@ -106,3 +106,16 @@ header {
     font-weight: 700;
     display: block;
 }
+
+/*.star::after {
+    font-family: "fontawesome";
+    content: "\f005";
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    display: none;
+}
+
+.active {
+    display: block;
+}*/

@@ -21,7 +21,13 @@ $(document).ready(function(){
                         titolo: film.title,
                         titoloOriginale: film.original_title,
                         lingua: film.original_language,
-                        voto: film.vote_average
+                        voto: film.vote_average,
+                        stella: ''
+                    }
+                    dataApi.voto = Math.round(dataApi.voto/2);
+                    for (var x = 0; x = 5; x++) {
+                        var star = '<i class="far fa-star"></i>';
+                        dataApi.stella = star;
                     }
                     var templateFull = template(dataApi);
                     $(".container-inner.result").append(templateFull);
