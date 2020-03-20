@@ -98,7 +98,7 @@ header {
 .card-template > span {
     font-weight: bold;
     font-size: 14px;
-    padding: 10px;
+    padding: 2.5px 5px;
 }
 
 .info-text {
@@ -108,5 +108,5 @@ header {
 }
 
 .star {
-    margin-left: 10px;
+    margin-left: 5px;
 }

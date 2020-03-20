@@ -44,7 +44,7 @@ $(document).ready(function(){
                         stella: ''
                     }
 
-                    dataApi.voto = Math.round(dataApi.voto/2);
+                    dataApi.voto = Math.ceil(dataApi.voto/2);
                     for (var x = 1; x <= 5; x++) {
 
                         if(x <= dataApi.voto) {                         // Se la stella che stampo è minore del voto allora è piena
