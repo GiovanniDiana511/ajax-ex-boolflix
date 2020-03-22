@@ -88,12 +88,29 @@ header {
     margin: 10px;
     border: 1px solid white;
     position: relative;
+    transition: 0.3s;
 }
 
 .card-template:hover {
-    overflow-y: auto;
-    transition: 0.3s;
     border: 1px solid darkred;
+}
+
+#empty-cover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222222;
+    font-size: 36px;
+    z-index: 2;
+}
+
+.cover > img {
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .text {
@@ -104,11 +121,15 @@ header {
     right: 0;
     opacity: 0;
     padding: 5px;
+    z-index: 3;
+    transition: 0.3s;
+    overflow-y: hidden;
 }
 
 .card-template:hover .text {
     opacity: 1;
     background-color: #222222;
+    overflow-y: auto;
 }
 
 .text > span {
@@ -125,8 +146,4 @@ header {
 .star {
     margin-left: 5px;
     color: gold;
-}
-
-#empty-cover {
-    position: absolute;
 }

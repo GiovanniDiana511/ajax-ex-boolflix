@@ -18,7 +18,7 @@
                         <img src="img/logo.png" alt="LOGO">
                     </div>
                     <div class="search-box">
-                        <input id="input-text" type="text" placeholder="Inserisci il testo" name="" value="">
+                        <input id="input-text" type="text" placeholder="Inserisci il titolo" name="" value="">
                         <button id="button-search" type="button" name="button">Cerca</button>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
         <script id="template" type="text/x-handlebars-template">
             <div class="card-template">
                 <div class="cover">
-                    <span id="empty-cover">{{emptyCover}}</span>
+                    <span id="empty-cover">{{{emptyCover}}}</span>
                     <img src="https://image.tmdb.org/t/p/w185/{{cover}}"></img>
                 </div>
                 <div class="text">

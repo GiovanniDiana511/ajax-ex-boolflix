@@ -1,19 +1,19 @@
 $(document).ready(function(){
-    /*function controllaCover(cover) {
+    function controllaCover(cover, predefinito) {
         if (cover == null) {
-            var prova = "prova";
+            predefinito = '<i class="fas fa-exclamation-triangle"></i>';
         }
-        return prova
-    }*/
+        return predefinito
+    }
     function punteggioStella(voto, stella) {
-        voto = Math.ceil(voto/2);
-        for (var x = 0; x <= 5; x++) {
+
+        for (var x = 1; x <= 5; x++) {
             if (x <= voto) {
                 var star = '<i class="fas fa-star"></i>';
                 stella += star;
             } else {
-            var star = '<i class="far fa-star"></i>';
-            stella += star;
+                var star = '<i class="far fa-star"></i>';
+                stella += star;
             }
         }
         return stella
@@ -46,12 +46,12 @@ $(document).ready(function(){
                     //console.log(film);
                     var dataApi = {
                         cover: film.poster_path,
-                        //emptyCover: prova,
+                        emptyCover: controllaCover(film.poster_path, ""),
                         titolo: film.title,
                         titoloOriginale: film.original_title,
                         lingua: controlloLingua(film.original_language),
-                        voto: film.vote_average,
-                        stella: punteggioStella(film.vote_average, ""),
+                        voto: Math.ceil(film.vote_average/2),
+                        stella: punteggioStella(Math.ceil(film.vote_average/2), ""),
                         trama: film.overview
                     }
                     var templateFull = template(dataApi);
@@ -81,12 +81,12 @@ $(document).ready(function(){
                     //console.log(film);
                     var dataApi = {
                         cover: movie.poster_path,
-                        emptyCover: '',
+                        emptyCover: controllaCover(movie.poster_path, ""),
                         titolo: movie.name,
                         titoloOriginale: movie.original_name,
                         lingua: controlloLingua(movie.original_language),
-                        voto: movie.vote_average,
-                        stella: punteggioStella(movie.vote_average, ""),
+                        voto: Math.ceil(movie.vote_average/2),
+                        stella: punteggioStella(Math.ceil(movie.vote_average/2), ""),
                         trama: movie.overview
                     }
                     var templateFull = template(dataApi);
