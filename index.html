@@ -15,10 +15,10 @@
             <header>
                 <div class="container-inner">
                     <div class="logo">
-                        <img src="img/logo.png" alt="LOGO">
+                        <img src="img/logo.png" alt="logo" title="Ritorna alla home"></img>
                     </div>
                     <div class="search-box">
-                        <input id="input-text" type="text" placeholder="Inserisci il titolo" name="" value="">
+                        <input id="input-text" type="text" placeholder="Cerca film o serie TV" name="" value="">
                         <button id="button-search" type="button" name="button">Cerca</button>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
         <script id="template" type="text/x-handlebars-template">
             <div class="card-template">
                 <div class="cover">
-                    <span id="empty-cover">{{{emptyCover}}}</span>
+                    <img src={{emptyCover}} id="empty-cover"></img>
                     <img src="https://image.tmdb.org/t/p/w185/{{cover}}"></img>
                 </div>
                 <div class="text">
